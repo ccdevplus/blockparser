@@ -737,7 +737,7 @@ static void getBlockHeader(
     #elif defined(JUMBUCKS)
         scrypt(hash, p, gHeaderSize);
     #else
-        sha256Twice(hash, p, gHeaderSize);
+        h9(hash, p, gHeaderSize);
     #endif
 
     auto i = gBlockMap.find(p + 4);
