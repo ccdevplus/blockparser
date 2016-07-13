@@ -70,6 +70,7 @@ static double getMem() {
         return 0;   // TODO
     #endif
 }
+#define BITCOIN DARKCOIN
 
 #if defined BITCOIN
     static const size_t gHeaderSize = 80;
@@ -91,8 +92,8 @@ static double getMem() {
 
 #if defined DARKCOIN
     static const size_t gHeaderSize = 80;
-    static auto kCoinDirName = ".darkcoin";
-    static const uint32_t gExpectedMagic = 0xbd6b0cbf;
+    static auto kCoinDirName = ".bitcoin";
+    static const uint32_t gExpectedMagic = 0x494e4350;
 #endif
 
 #if defined PROTOSHARES
